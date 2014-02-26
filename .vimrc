@@ -3,6 +3,7 @@ set modeline
 set shiftwidth=4
 set tabstop=8
 set softtabstop=4
+set linebreak
 set expandtab
 set autoindent
 set list
@@ -17,18 +18,14 @@ set nu
 " Text markers
 set listchars=tab:>-
 set showmatch
+set showcmd
+set cursorline
+set ruler
 
 " Syntax settings
-syntax enable
-colorscheme desert
+syntax on 
 set background=dark
-
-if has("gui_running") " Set extra options when running in GUI mode
-    set guioptions-=T
-    set guioptions+=e
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
+colorscheme TomorrowNightEighties
 
 " Search settings
 set incsearch
@@ -45,4 +42,11 @@ filetype indent on
 set encoding=utf8
 
 " Navigation
-set mouse=a
+set mouse=ai
+
+" Lightline plugin
+set laststatus=2
+Bundle 'itchyny/lightline.vim'
+"NeoBundle 'itchyny/lightline.vim'
+let g:lightline = {
+      \ 'colorscheme': 'wombat'}
