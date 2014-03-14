@@ -15,7 +15,8 @@ set si "Smart indent
 set wrap "Wrap lines
 set nu
 
-" Text markers
+" Text marker
+match ErrorMsg '\s\+$' "Show a red highlight on tailing spaces
 set listchars=tab:>-
 set showmatch
 set showcmd
@@ -23,7 +24,7 @@ set cursorline
 set ruler
 
 " Syntax settings
-syntax on 
+syntax on
 set background=dark
 colorscheme TomorrowNightEighties
 
