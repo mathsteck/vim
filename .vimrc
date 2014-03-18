@@ -6,7 +6,6 @@ set softtabstop=4
 set linebreak
 set expandtab
 set autoindent
-set list
 set backspace=eol,start,indent
 set lbr "Line break on 500 chars
 set tw=500
@@ -16,8 +15,8 @@ set wrap "Wrap lines
 set nu
 
 " Text marker
-match ErrorMsg '\s\+$' "Show a red highlight on tailing spaces
-set listchars=tab:>-
+set list
+set listchars=trail:◃,nbsp:•
 set showmatch
 set showcmd
 set cursorline
@@ -41,13 +40,19 @@ set history=100000
 filetype plugin on
 filetype indent on
 set encoding=utf8
+" set vim to chdir for each file
+if exists('+autochdir')
+    set autochdir
+else
+    autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
+endif
 
 " Navigation
 set mouse=ai
 
 " Lightline plugin
-set laststatus=2
-Bundle 'itchyny/lightline.vim'
+"set laststatus=2
+"Bundle 'itchyny/lightline.vim'
 "NeoBundle 'itchyny/lightline.vim'
-let g:lightline = {
-      \ 'colorscheme': 'wombat'}
+"let g:lightline = {
+"      \ 'colorscheme': 'wombat'}
