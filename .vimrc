@@ -54,9 +54,21 @@ set mouse=ai
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
+
+" Plugins
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Plugin 'gmarik/vundle' " Vundle
+Plugin 'itchyny/lightline.vim' " Lightline bar
+Plugin 'hynek/vim-python-pep8-indent' " PEP 8
+filetype plugin indent on     " required
+
 " Lightline plugin
-"set laststatus=2
-"Bundle 'itchyny/lightline.vim'
-"NeoBundle 'itchyny/lightline.vim'
-"let g:lightline = {
-"      \ 'colorscheme': 'wombat'}
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'wombat'}
