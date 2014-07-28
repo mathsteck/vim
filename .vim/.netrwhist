@@ -1,3 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/mathsteck/devel/master/stoq-portal/portal/static/js'
+let g:netrw_dirhist_2='/home/mathsteck/devel/master/stoq-portal/www/stoq/templates/products/details'
+let g:netrw_dirhist_3='/home/mathsteck/devel/master/stoq-portal/tools/git-hooks'
+let g:netrw_dirhist_4='/home/mathsteck/devel/master/stoq-portal/www/stoq'
+let g:netrw_dirhist_5='/home/romaia/devel/nfetool'
