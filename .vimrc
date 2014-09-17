@@ -14,17 +14,6 @@ set si "Smart indent
 set wrap "Wrap lines
 set nu
 
-" Font
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=fonts/cousine\ 9
-  elseif has("gui_macvim")
-    set guifont=Menlo\ Regular:h14
-  elseif has("gui_win32")
-    set guifont=Consolas:h11:cANSI
-  endif
-endif
-
 " Text marker
 set list
 set listchars=trail:◃,nbsp:•
